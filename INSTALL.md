@@ -109,10 +109,24 @@ Also see the README for usage information.
 
 ## Quick version for FreeBSD
 
-The build process for FreeBSD is rather complicated, but the good news is that
-there is a script in the 'scripts' folder that will at least attempt to do all
-the work for you. And should the script not work for you, you can still look
-through it and use it as an installation guide.
+
+The forked-daapd build process on FreeBSD could be automated via the existing
+audio/forked-daapd port in the Ports Collection. By modifying port's Makefile,
+you can specify your own forked-daapd fork as a website to get the source
+code from, change build options, etc., while still benefitting
+from the ports framework handling all the building details for you
+(like installing dependencies and running proper commands to build
+and install forked-daapd). In general, the following should be sufficient
+to build forked-daapd from source on FreeBSD:
+
+```sh
+cd /usr/ports/audio/forked-daapd
+make install
+```
+
+Otherwise, there is a script in the 'scripts' folder that will at least attempt
+to do all the work for you. And should the script not work for you,
+you can still look through it and use it as an installation guide.
 
 ## Quick version for macOS (using Homebrew)
 
